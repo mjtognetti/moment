@@ -570,6 +570,10 @@
         return this._d.getTimezoneOffset();
     };
 
+    // AMD module is defined
+    if (typeof define == 'function' && define.amd) {
+       define(function(){ return moment; });
+    }
     // CommonJS module is defined
     if (hasModule) {
         module.exports = moment;
